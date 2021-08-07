@@ -1,21 +1,24 @@
 'use strict';
 
-let text = prompt('Введите текст', ' проверка на правильную работу12345678910111213141516171819 ');
+let arr = ['3245', '234435', '3245', '789678', '45463', '25443', '243269'];
+console.log(arr);
 
-
-let additionalTask = function(text) {
-    let check = parseFloat(text);
-    if (!isNaN(check)) {
-        alert('Введите текст!');
-    } else if (text.trim().length >= 30) {
-        let intermediateText = text.trim();
-        let replacement = intermediateText.slice(30);
-        let finalText = intermediateText.replace(replacement, '...');
-        return console.log(finalText);
-    } else {
-        let finalText = text.trim();
-        return console.log(finalText);
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i].charAt(0) === '2' || arr[i].charAt(0) === '4') {
+        console.log(arr[i]);
     }
-};
+}
 
-console.log(additionalTask(text));
+
+let check = 0;
+for (let number = 0; number < 101; number++) {
+    for (let i = 1; i < number + 1; i++) {
+        if (number % i === 0) {
+            check++;
+        }
+    }
+    if (check === 2) {
+        console.log('Делители этого числа 1 и', number);
+    }
+    check = 0;
+}
