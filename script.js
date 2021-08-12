@@ -75,9 +75,10 @@ let addZero = function(num) {
 
 let getTime = function() {
     let timeDate = new Date();
-    console.log('Сегодня ' + weekDay() + ', ' + timeDate.getDate() + ' ' + getMonth() + ' ' + timeDate.getFullYear() + ' года, ' + timeDate.getHours() + ' ' + times() + ' ' + timeDate.getMinutes() + ' минут ' + timeDate.getSeconds() + ' секунд');
-    console.log(addZero(timeDate.getDate()) + '.' + addZero(timeDate.getMonth()) + '.' + timeDate.getFullYear() + ' - ' + addZero(timeDate.getHours()) + ':' + addZero(timeDate.getMinutes()) + ':' + addZero(timeDate.getSeconds()));
-
+    document.write('Сегодня ' + weekDay() + ', ' + timeDate.getDate() + ' ' + getMonth() + ' ' + timeDate.getFullYear() + ' года, ' + timeDate.getHours() + ' ' + times() + ' ' + timeDate.getMinutes() + ' минут ' + timeDate.getSeconds() + ' секунд');
+    document.write('<br>');
+    document.write(addZero(timeDate.getDate()) + '.' + addZero(timeDate.getMonth()) + '.' + timeDate.getFullYear() + ' - ' + addZero(timeDate.getHours()) + ':' + addZero(timeDate.getMinutes()) + ':' + addZero(timeDate.getSeconds()));
+    document.write('<br>');
 };
 
 
